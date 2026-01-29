@@ -1,0 +1,16 @@
+from functools import wraps
+def my_decorator(func):
+    # @wraps(func)
+    def wrapper():
+        print("Before function runs")
+        func()
+        print("After function runs")
+    return wrapper
+
+@my_decorator
+def greet():
+    print("hello from decorators")
+
+greet()  # this line of code excute the wrapper function
+
+print("name of functino: ", greet.__name__)
