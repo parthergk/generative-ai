@@ -1,6 +1,12 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 from google import genai
 
-client = genai.Client(api_key="AIzaSyDVWWclGSR8p5bCflJiiUoT67WT5o3kpVA")
+gemini_key = os.getenv("GEMINI_API_KEY")
+
+client = genai.Client(api_key=gemini_key)
 
 response = client.models.generate_content(
     model= "gemini-2.5-flash", contents = "How are you?"
