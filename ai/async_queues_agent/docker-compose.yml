@@ -2,4 +2,9 @@ services:
   qdarnt:
     image: qdrant/qdrant:latest
     ports:
-      - 6333:6333
+      - "6333:6333"
+
+  valkey:
+    image: valkey/valkey:latest
+    ports:
+      - "6379:6379"
