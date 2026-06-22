@@ -6,4 +6,4 @@ conn_redis = Redis(
     port=6379
 )
 
-queue = Queue("pdf_queue", connection=conn_redis)
+queue = Queue("query_queue", connection=conn_redis)
