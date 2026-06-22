@@ -6,7 +6,7 @@ from langchain_qdrant import QdrantVectorStore
 from dotenv import load_dotenv
 
 load_dotenv()
-pdf_path = Path(__file__).parent / "ScopeAndClosures.pdf";
+pdf_path = Path(__file__).parent / "JavaScript.pdf";
 
 loader = PyPDFLoader(pdf_path);
 
