@@ -9,7 +9,7 @@ def nodeA (state: State):
     print("\n\ninside node a sate", state);
     return {"messages": ["Hi this is the message from the nodeA"]};
 
-def nodeB(state: State):
+def nodeB (state: State):
     print("\n\ninside node b state", state);
     return {"messages": ["Hi this is the message of nodeB"]};
 

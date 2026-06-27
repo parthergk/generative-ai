@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
 from typing_extensions import TypedDict
-from typing import Optional,  Literal
+from typing import Optional, Literal
 from openai import OpenAI
 from langgraph.graph import StateGraph, END, START
 load_dotenv()
