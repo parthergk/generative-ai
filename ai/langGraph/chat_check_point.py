@@ -40,5 +40,5 @@ with MongoDBSaver.from_conn_string("mongodb://admin:admin@localhost:27017") as c
             "thread_id": "parther"
         }
     }
-    for chunk in check_pointer_graph.stream(State({"messages": ["what is my name"]}), config, stream_mode="values"):
+    for chunk in check_pointer_graph.stream(State({"messages": ["What is my proffesion"]}), config, stream_mode="values"):
         chunk["messages"][-1].pretty_print()
