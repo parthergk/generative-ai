@@ -1,5 +1,6 @@
-from dotenv import load_dotenv
+import json
 import os
+from dotenv import load_dotenv
 from mem0 import Memory
 from openai import OpenAI
 
@@ -41,9 +42,9 @@ while True:
     ]
     print("saved memory:", memories)
 
-    SYSTEM_PROMPT = """
+    SYSTEM_PROMPT = f"""
     Here is the context about the user:
-    {memories}
+    {json.dumps(memories)}
     """
     response =  client.chat.completions.create(
         model="gpt-5-mini",
